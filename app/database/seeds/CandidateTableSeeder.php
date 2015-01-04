@@ -2,6 +2,8 @@
 
 // Composer: "fzaninotto/faker": "v1.3.0"
 use Faker\Factory as Faker;
+use HireMe\Entities\User;
+use HireMe\Entities\Candidate;
 
 class CandidateTableSeeder extends Seeder {
 
@@ -25,7 +27,7 @@ class CandidateTableSeeder extends Seeder {
 				'website_url' => $faker->url,
 				'description' => $faker->text(200),
 				'job_type' => $faker->randomElement(['full', 'partial', 'freelance']),
-				'category_id' => $faker->randomElement([1,2.3]),
+				'category_id' => $faker->randomElement([1,2,3]),
 				'available' => true,
 				'slug' => \Str::slug($full_name)
 			]);
